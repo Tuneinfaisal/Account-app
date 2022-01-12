@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Menu from "./Menu"
+import { Switch,Route,Redirect } from "react-router-dom";
+import Home from "./Home";
+import Login from "./Login";
+import Tranction from "./Transaction"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default () => {
+    return (
+        <div>
+            <Menu></Menu>
+            <Switch>
+
+                <Route exact path="/">
+                    <Home/>
+                </Route>
+                <Route exact path="/Login">
+                    <Login/>
+                </Route>
+                <Route exact path="/Transaction">
+                    <Tranction/>
+                </Route>
+
+            </Switch>
+        </div>
+    )
 }
-
-export default App;
