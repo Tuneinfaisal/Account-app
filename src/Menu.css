@@ -200,3 +200,41 @@
   margin-right: 36%;
   margin-top: 20px;
 }
+#root > div > div.form{
+  display: flex;
+  justify-content:center;
+  margin-top: 80px;
+  padding-bottom: 10px;
+}
+#root > div > div.form > form > a{
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+}
+#root > div > label{
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+}
+#root > div > div:nth-child(7){
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+}
+#root > div > div:nth-child(7) > button{
+  margin-top: 50px;
+  margin-right: 10%;
+  
+}
+#root > div > label > p{
+  color: white;
+  padding-right: 10px;
+}
+#root > div > button{
+  margin-top: 50px;
+  margin-left: 40%;
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+
+}

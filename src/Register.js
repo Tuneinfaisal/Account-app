@@ -42,8 +42,7 @@ export default function Login() {
                     </div>
                 </form>
             </div>
-           </>
-        </)}
+        </>)}
 Login.propTypes = {
     setToken: PropTypes.func.isRequired
 }

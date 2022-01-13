@@ -29,7 +29,15 @@ const headers = [
     return (<><div class="text-center">
         <h1>Welcome to Transacation Data</h1>
     </div><div classname="App">
-            <CSVLink {...csvreport} class="button-30"> yaha se krle bhai..download..</CSVLink>
-        </div></> )}
+            <CSVLink {...csvreport} class="button-30">download your data</CSVLink>
+        </div>
+        <label><p>Amount</p><input type="number"/></label><br/><br/>
+        <div>
+        <input type="radio" value="Deposit" name="type" /> Deposit
+        <input type="radio" value="Withdraw" name="type" /> Withdraw
+        <br/><br/></div>
+        <button className="button-30" type="submit">Proceed</button>
+        
+      </> )}
 
 export default home;

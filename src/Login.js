@@ -1,57 +1,65 @@
-import React , { useState } from "react";
-import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
-async function loginUser(credentials) {
-    return fetch('http://localhost:8080/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-    })
-        .then(data => data.json())
-}
+export default function Form() {
+const [name, setName] = useState('');
+const [password, setPassword] = useState('');
+const [submitted, setSubmitted] = useState(false);
+const [error, setError] = useState(false);
+const handleName = (e) => {
+	setName(e.target.value);
+	setSubmitted(false);
+};
+const handlePassword = (e) => {
+	setPassword(e.target.value);
+	setSubmitted(false);
+};
+const handleSubmit = (e) => {
+	e.preventDefault();
+	if (name === '' || password === '') {
+	setError(true);
+	} else {
+	setSubmitted(true);
+	setError(false);
+	}
+};
 
-export default function Login({ setToken }) {
-    const [username, setUserName] = useState();
-    const [password, setPassword] = useState();
-    const handleSubmit = async e => {
-        e.preventDefault();
-        const token = await loginUser({
-            username,
-            password
-        });
-        setToken(token);
-    }
-    return (
-        <>
-            <div className="login-wrapper">
-                <h1>Log In</h1>
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        <p>Name</p>
-                        <input type="text" 
-                        onChange={e => setUserName
-                        (e.target.value)} />
-                    </label>
-                    <br/><br/>
-                    <label>
-                        <p>Password</p>
-                        <input type="password" 
-                        onChange={e => setPassword
-                        (e.target.value)} />
-                    </label>
-                    <br/><br/>
-                    <div>
-                        {/* <button type="submit" onClick={Home}>Login</button> */}
-                        <Link to="/" className="btn btn-primary">Login here</Link>
-                    </div>
-                </form>
-            </div>
-        </>
-    )
-}
-Login.propTypes = {
-    setToken: PropTypes.func.isRequired
+const sucessMsg = () => {
+	return (
+	<div
+		className="success"style={{display: submitted ? '' : 'none',}}>
+		<h1>User {name} successfully registered!!</h1>
+	</div>);};
+
+const errorMessage = () => {
+	return (
+	<div
+		className="error"
+		style={{
+		display: error ? '' : 'none',
+		}}>
+		<h1> enter all the fields</h1>
+	</div>
+	);
+};
+
+return (
+	<div className="form">
+	<div className="messages">
+		{errorMessage()}
+		{sucessMsg()}
+	</div>
+
+	<form>
+		<label className="label">Name</label>
+		<input onChange={handleName} className="input"value={name} type="text" />
+        <br/><br/>
+		<label className="label">Password</label>
+		<input onChange={handlePassword} className="input"value={password} type="password" />
+        <br/>
+
+		{/* <button onClick={handleSubmit} className="button-17" type="submit">Login</button> */}
+        <Link to="/" className="btn btn-primary">Login here</Link>
+	</form>
+	</div>
+);
 }
