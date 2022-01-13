@@ -24,7 +24,6 @@ const headers = [
 <li> Name: "asif", Balance: 40000, Password: "xyz"   </li></> */}
 
 
-
  function home () {
     return (<><div class="text-center">
         <h1>Welcome to Transacation Data</h1>
