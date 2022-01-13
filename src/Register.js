@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export default function Login({ setToken }) {
+export default function Login() {
     const [username, setUserName] = useState();
     const [balance, setBalance] = useState();
     const [password, setPassword] = useState();
@@ -42,9 +42,7 @@ export default function Login({ setToken }) {
                     </div>
                 </form>
             </div>
-            <div class="text-center">
-                <h1>Work in processss</h1>
-            </div></>
+        </>
     )
 }
 Login.propTypes = {

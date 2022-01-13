@@ -49,9 +49,7 @@ export default function Login({ setToken }) {
                     </div>
                 </form>
             </div>
-            <div class="text-center">
-                <h1>Work in processss</h1>
-            </div></>
+        </>
     )
 }
 Login.propTypes = {
