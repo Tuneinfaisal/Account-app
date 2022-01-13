@@ -184,3 +184,19 @@
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+#root{
+  width: 100%;
+  padding-bottom: 30%;
+  background-color: #04aa6d;
+}
+#root > div > div:nth-child(3){
+  display: flex;
+  justify-content:center;
+  padding-top: 10%;
+}
+#root > div > div:nth-child(4) > a.button-30{
+  display: flex;
+  justify-content:center;
+  margin-right: 36%;
+  margin-top: 20px;
+}

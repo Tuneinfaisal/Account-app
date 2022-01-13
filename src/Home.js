@@ -7,12 +7,10 @@ export default function home () {
             <h1>Welcome to Dashboard</h1>
         </div><div className="btns">
                 <button class="button-30" onClick={popMsg}>Passbook</button><br /><br />
-                {/* <button class="button-30" onClick={popTrans}>transaction</button> */}
             </div></><div>
-            <Link to="/Login" className="button-17">Login out</Link>
-            <br/>
-    
-            
+                <Link to="/TranPage" className="button-30"> Transaction Page </Link>
+            <Link to="/Login" className="button-17">Log out</Link>
+            <br/>  
             </div></>
     )
     function popMsg()  {
