@@ -3,7 +3,7 @@ import Menu from "./Menu"
 import { Switch,Route,Redirect } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
-import Tranction from "./Transaction"
+import Register from "./Register"
 
 export default () => {
     // const [token, setToken] = useState();
@@ -21,8 +21,8 @@ export default () => {
                 <Route exact path="/Login">
                     <Login/>
                 </Route>
-                <Route exact path="/Transaction">
-                    <Tranction/>
+                <Route exact path="/Register">
+                    <Register/>
                 </Route>
 
             </Switch>
