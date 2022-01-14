@@ -16,10 +16,10 @@ export default () => {
             <Menu></Menu>
             <Switch>
 
-                <Route exact path="/">
+                <Route exact path="/Home">
                     <Home/>
                 </Route>
-                <Route exact path="/Login">
+                <Route exact path="/">
                     <Login/>
                 </Route>
                 <Route exact path="/Register">

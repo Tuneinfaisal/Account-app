@@ -7,8 +7,8 @@ export default () => {
         <>
             <div class="topnav" id="myTopnav">
                 <nav>
-                    <NavLink exact to="/">Home</NavLink>
-                    <NavLink to="/login">Login</NavLink>
+                    <NavLink exact to="/home">Home</NavLink>
+                    <NavLink exact to="/">Login</NavLink>
                     <NavLink to="/register">Register</NavLink>
                 </nav>
             </div>
