@@ -13,6 +13,9 @@ export default function Login() {
         if(name == "") {
             alert("must be filled");
         }
+
+        //send this userdata to backend
+        const newEntry = {username,balance,password};
     }
     return (
         <>
@@ -22,13 +25,15 @@ export default function Login() {
                     <label>
                         <p>Name</p>
                         <input type="text" 
+                        value={username}
                         onChange={e => setUserName
-                        (e.target.value)} name="uname" required />
+                        (e.target.value)} required />
                     </label>
                     <br/><br/>
                     <label>
                         <p>Balance</p>
                         <input type="text" 
+                        value={balance}
                         onChange={e => setBalance
                         (e.target.value)} required />
                     </label>
@@ -36,6 +41,7 @@ export default function Login() {
                     <label>
                         <p>Password</p>
                         <input type="password" 
+                        value={password}
                         onChange={e => setPassword
                         (e.target.value)} required />
                     </label>
