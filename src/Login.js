@@ -73,8 +73,8 @@ export default function Form() {
                 />
                 <br />
 
-                {/* <button onClick={handleSubmit} className="button-17" type="submit">Login</button> */}
-                <Link to="/" className="btn btn-primary">
+                <button onClick={handleSubmit} className="button-17" type="submit">Login</button>
+                <Link to="/home" className="btn btn-primary">
                     Login here
                 </Link>
             </form>
