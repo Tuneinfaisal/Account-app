@@ -5,6 +5,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register"
 import TranPage from "./TranPage"
+import Dashboard from "./Dashboard"
 
 export default () => {
     // const [token, setToken] = useState();
@@ -27,6 +28,9 @@ export default () => {
                 </Route>
                 <Route exact path="/TranPage">
                     <TranPage/>
+                </Route>
+                <Route exact path="/Dashboard">
+                    <Dashboard/>
                 </Route>
 
             </Switch>

@@ -236,5 +236,75 @@
   display: flex;
   justify-content:center;
   margin-top: 20px;
-
+}
+#root > div > div.form > div{
+  text-align: end;
+  padding-right: 40px;
+  padding-bottom: 30%;
+}
+#root > div > div.form > form{ 
+  background-color: #ff0000;
+  padding-bottom: -20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: black; 
+  box-sizing: border-box;
+  border-color: honeydew;
+  border-radius: 10px;
+}
+#root > div > div.form > form:hover{
+  background-color: green
+}
+#root > div > div.form > form > label:nth-child(1){
+  color: white;
+  padding-right: 5px;
+}
+#root > div > div.form > form > input:nth-child(2){
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+#root > div > div.form > form > input:nth-child(2):hover{
+  color: #ffffff;
+  background-color: tomato;
+  font-family: monospace;
+}
+#root > div > div.form > form > label:nth-child(5){
+  color: white;
+  padding-right: 5px;
+}
+#root > div > div.form > form > input:nth-child(6){
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+#root > div > div.form > form > input:nth-child(6):hover{
+  color: #000000;
+  background-color: tomato;
+  font-family: monospace;
+}
+#root > div > div.form > form > button{
+  margin-top: 20%;
+  display: flex;
+  justify-content:center;
+  margin-left: 50px; 
+}
+#root > div > div.form > div > div.error{
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#root > div > div.form > div > div.success{
+  color: white;
+  font-family: cursive;
+}
+#root > div > div.form > div{
+  text-align: center;
+  padding-right: 10%;
+}
+#root > div > div:nth-child(3) > p{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+#root > div > div:nth-child(4){
+  padding-right: 30%;
 }

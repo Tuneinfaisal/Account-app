@@ -42,7 +42,7 @@ export default function Form() {
                     display: error ? "" : "none",
                 }}
             >
-                <h1> enter all the fields</h1>
+                <h1> Enter all the fields</h1>
             </div>
         );
     };
@@ -73,8 +73,8 @@ export default function Form() {
                 />
                 <br />
 
-                <button onClick={handleSubmit} className="button-17" type="submit">Login</button>
-                <Link to="/home" className="btn btn-primary">
+                {/* <button onClick={handleSubmit} className="button-17" type="submit">Login</button> */}
+                <Link to="/Dashboard" className="btn btn-primary" >
                     Login here
                 </Link>
             </form>
