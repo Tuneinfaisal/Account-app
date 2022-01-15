@@ -17,9 +17,7 @@ export default function home() {
                     <h1>Welcome to Dashboard</h1>
                 </div>
                 <div className="btns">
-                    <button class="button-30" onClick={popMsg}>
-                        Passbook
-                    </button>
+                    <Link to="/Passbook" class="button-30" >Passbook</Link>
                     <br />
                     <br />
                 </div>
