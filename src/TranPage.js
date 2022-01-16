@@ -43,7 +43,7 @@ export default () => {
         console.log(amount);
         console.log(transactionType);
 
-        alert("wait we are fetching your data....");
+        alert("transaction si done!!!");
     };
 
     return (
