@@ -7,18 +7,18 @@ export default function Login() {
     const [name, setName] = useState();
     const [balance, setBalance] = useState();
     const [password, setPassword] = useState();
-    const url = "http://localhost:8000/api/v1/account/registration"
+
+    const url = "http://localhost:8000/api/v1/account/s"
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         Axios.post(url,{
             name: name,
             balance: balance,
             password: password
         })
-        name = "";
-        balance = "";
-        password = "";
+        
         alert("Your data is saved");
     }
     return (

@@ -7,6 +7,7 @@ import Register from "./Register"
 import TranPage from "./TranPage"
 import Dashboard from "./Dashboard"
 import Passbook from "./Passbook"
+import Alluser from "./Alluser";
 
 export default () => {
     // const [token, setToken] = useState();
@@ -35,6 +36,9 @@ export default () => {
                 </Route>
                 <Route exact path="/Passbook">
                     <Passbook/>
+                </Route>
+                <Route exact path="/Alluser">
+                    <Alluser/>
                 </Route>
 
             </Switch>
