@@ -21,7 +21,8 @@ export default function home() {
                     <p><h1>Please Login first to access ...<br/>
                     This page gives more access to functionality in future updates!!</h1></p>
                     <br/>
-                    <img  src={marvel} alt="loading..."/>
+                    {/* <img  src={marvel} alt="loading..."/> */}
+                    <Link to="/" className="button-17">Log from here</Link>
 
                 </div>
                 {/* <div className="btns">

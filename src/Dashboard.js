@@ -9,7 +9,7 @@ export default function home() {
     //             <Link to="./"></Link>
     //     )
     // }
-    
+
     return (
         <>
             <>
@@ -19,6 +19,9 @@ export default function home() {
                 <div className="btns">
                     <Link to="/Passbook" class="button-30" >Passbook</Link>
                     <br />
+                    <div>
+                        <Link to="/Alluser" className="button-30" >{" "}Get All user list{" "} </Link>
+                    </div>
                     <br />
                 </div>
             </>
