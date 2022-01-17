@@ -1,15 +1,17 @@
 import axios  from "axios";
-import { useState } from "react";
+import React from "react";
+import{ useState } from "react";
 import { Redirect ,useHistory }  from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "./Style.css";
+
+
 
 function App(props) {
     let history = useHistory()
 
     const [name , setName] = useState("");
     const [password , setPassword] = useState("");
-
     const [loginInfo , setloginInfo] = useState("")
 
 
@@ -23,14 +25,6 @@ function App(props) {
         props.setLoggedinUser(resp.data.name)
         if(resp.data.name != "" )
         history.push('/Dashboard')
-        // return <Redirect to="/Dashboard"/>  
-        // .then((response)=>{
-        //     if(response.data.message){
-        //         setloginInfo(response.data.message) 
-        //     }else{
-        //         setloginInfo(response.data[0].name) 
-        //     }
-        // });
     }
 
     return(
@@ -41,7 +35,9 @@ function App(props) {
             <input type="text" placeholder="name.." onChange={(e) =>{ setName(e.target.value); }}/>
             <input type="password" placeholder="password.."  onChange={(e) =>{ setPassword(e.target.value);}}/>
             <button className="btn btn-primary" onClick={Login}> Login </button>
+            
         </div>
+        
 
         <h1>{setloginInfo}</h1>
         </div>
