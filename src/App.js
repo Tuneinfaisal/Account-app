@@ -11,6 +11,7 @@ import Alluser from "./Alluser";
 
 export default () => {
     const [loggedinUser , setLoggedinUser] = useState();
+    const [userPassbook , setUserPassbook] = useState();
     return (
         <div>
             <Menu></Menu>
@@ -29,10 +30,10 @@ export default () => {
                     <TranPage loggedinUser = {loggedinUser}/>
                 </Route>
                 <Route exact path="/Dashboard">
-                    <Dashboard loggedinUser = {loggedinUser} setLoggedinUser={setLoggedinUser}/>
+                    <Dashboard loggedinUser = {loggedinUser} setLoggedinUser={setLoggedinUser} setUserPassbook = {setUserPassbook} />
                 </Route>
                 <Route exact path="/Passbook">
-                    <Passbook loggedinUser = {loggedinUser} />
+                    <Passbook loggedinUser = {loggedinUser} userPassbook = {userPassbook} />
                 </Route>
                 <Route exact path="/Alluser">
                     <Alluser/>

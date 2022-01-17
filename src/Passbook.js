@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CSVLink } from "react-csv";
+import { CSVLink , CSVDownload} from "react-csv";
 import axios, { Axios }  from "axios";
 
 //this is DEMO data to test the export CSV file getting saved to system... 
@@ -20,21 +20,20 @@ const headers = [
     filename: 'Backend data.csv'
   };
 
-export default function home() {
-  
-  // const [transaction, setTransaction] = useState("");
-  // const getTransaction = () => {
-  //   axios.get("/api/v1/account/asif/passbook").then((response) =>{
-  //     setTransaction(response)
-  //   })
-  // }
-
+export default function home(props) {
+  console.log(props.userPassbook)
     return (
         <><div class="text-center">
             <h1>Welcome to Passbook page</h1>
+            {props.userPassbook.map(t=>{
+              return <li> {t.id} &nbsp; {t.name}&nbsp; {t.amount}&nbsp; {t.date}&nbsp;{t.type}</li>
+            }) }
             <br />
         </div><div classname="App">
-                <CSVLink {...csvreport} class="button-30">Download data</CSVLink>
-                {/* <button class="button-30">Download</button> */}
+                {/* <CSVLink {...csvreport} class="button-30">Download data</CSVLink> */}
+  
+                {/* <CSVDownload data={props.userPassbook} target="_blank" > Download here </CSVDownload> */}
+                <CSVLink  data={props.userPassbook} target="_blank" class="button-30">Download your data</CSVLink>
+
             </div></>
     )}

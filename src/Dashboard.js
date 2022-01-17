@@ -1,16 +1,25 @@
+import axios from "axios";
 import React from "react";
 import { Link , Redirect, useHistory } from "react-router-dom";
 
 export default function Dashboard(props) {
+    
     let history = useHistory()
 
     if(!props.loggedinUser) {
         history.push('/');
     }
+    
     const logoutHandler = (e) => {
         e.preventDefault();
         props.setLoggedinUser("")
         history.push('/');
+    }
+    const getTransactionHandler = async(e) =>{
+        const resp = await axios.get(`http://localhost:8000/api/v1/account/${props.loggedinUser}/passbook`)
+        console.log(resp)
+        props.setUserPassbook(resp.data)
+        history.push('/Passbook');
     }
 
     return (
@@ -20,10 +29,10 @@ export default function Dashboard(props) {
                     <h1>Welcome to Dashboard</h1>
                 </div>
                 <div className="btns">
-                    <Link to="/Passbook" class="button-30" >Passbook</Link>
+                    <button onClick={getTransactionHandler} className="button-30"> Passbook </button>
                     <br />
                     <div>
-                        <Link to="/Alluser" className="button-30" >{" "}Get All user list{" "} </Link>
+                        {/* <Link to="/Alluser" className="button-30" >{" "}Get All user list{" "} </Link> */}
                     </div>
                     <br />
                 </div>

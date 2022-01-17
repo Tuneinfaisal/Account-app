@@ -1,17 +1,5 @@
 import React from "react";
-// import Axios from "axios";
-// import { useEffect , useState} from "react";
 
-// const [repo, setRepo] = useState([]);
-
-// const getRepo =  () => {
-// Axios.Get("http://localhost:8000/api/v1/account/users")
-// .then((response) => {
-// console.log(response);
-// const myRepo= response.data;
-// setRepo (myRepo);});
-// };
-// useEffect (() => getRepo(), []);
 class App extends React.Component {
     constructor(props) {
         super(props);
