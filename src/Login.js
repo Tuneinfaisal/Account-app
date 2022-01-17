@@ -2,6 +2,7 @@ import axios  from "axios";
 import { useState } from "react";
 import { Redirect ,useHistory }  from "react-router-dom";
 // import { Link } from "react-router-dom";
+import "./Style.css";
 
 function App(props) {
     let history = useHistory()
@@ -33,15 +34,17 @@ function App(props) {
     }
 
     return(
+        <div class="container">
         <div className="App">
         <div className="Login">
             <h1>Login here</h1>
             <input type="text" placeholder="name.." onChange={(e) =>{ setName(e.target.value); }}/>
             <input type="password" placeholder="password.."  onChange={(e) =>{ setPassword(e.target.value);}}/>
-            <button onClick={Login}> Login </button>
+            <button className="btn btn-primary" onClick={Login}> Login </button>
         </div>
 
         <h1>{setloginInfo}</h1>
+        </div>
         </div>
     )
 }

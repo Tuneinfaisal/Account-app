@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./Style.css";
 // import PropTypes from 'prop-types';
 // import { Link } from 'react-router-dom';
 
@@ -20,28 +23,28 @@ export default function Login() {
     }
     return (
         <>
-            <div>
+        <body>
+            <div class="container">
                 <h1>Sign up</h1>
                 <label>
                     <p>Name</p>
-                    <input type="text" 
+                    <input type="text" placeholder="Enter name"
                     onChange={e => setName
                     (e.target.value)} value={name} required />
                 </label>
-                <br/><br/>
+                <br/>
                 <label>
                     <p>Balance</p>
-                    <input type="text" 
+                    <input type="text" placeholder="Enter balance"
                     onChange={e => setBalance
                     (e.target.value)} 
                     value={balance}
                     required />
                 </label>
-                <br/><br/>
+                <br/>
                 <label>
                     <p>Password</p>
-                    <input type="password" 
-                    
+                    <input type="password" placeholder="Enter password"
                     onChange={e => setPassword
                     (e.target.value)} value={password} required />
                 </label>
@@ -50,6 +53,7 @@ export default function Login() {
                 <button className="btn btn-primary" type="submit" onClick={handleSubmit}>Submit</button>
                 
             </div>
+        </body>
         </>)}
 // Login.propTypes = {
 //     setToken: PropTypes.func.isRequired
