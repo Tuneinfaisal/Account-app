@@ -10,10 +10,7 @@ import Passbook from "./Passbook"
 import Alluser from "./Alluser";
 
 export default () => {
-    // const [token, setToken] = useState();
-    // if(!token) {
-    //     return <Login setToken={setToken} />
-    //   }
+    const [name , setName] = useState()
     return (
         <div>
             <Menu></Menu>
@@ -23,16 +20,16 @@ export default () => {
                     <Home/>
                 </Route>
                 <Route exact path="/">
-                    <Login/>
+                    <Login setName={setName}/>
                 </Route>
                 <Route exact path="/Register">
                     <Register/>
                 </Route>
                 <Route exact path="/TranPage">
-                    <TranPage/>
+                    <TranPage name = {name}/>
                 </Route>
                 <Route exact path="/Dashboard">
-                    <Dashboard/>
+                    <Dashboard name = {name} setName={setName}/>
                 </Route>
                 <Route exact path="/Passbook">
                     <Passbook/>

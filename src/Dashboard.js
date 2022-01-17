@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link , useHistory } from "react-router-dom";
 
-export default function home() {
+export default function Dashboard(props) {
+    let history = useHistory()
 
-    // const tracsactionHandler = (e) => {
-    //     e.preventDefault();
-    //     return(
-    //             <Link to="./"></Link>
-    //     )
-    // }
+    const logoutHandler = (e) => {
+        e.preventDefault();
+        props.setName("")
+        history.push('/')
+    }
 
     return (
         <>
@@ -30,7 +30,8 @@ export default function home() {
                 <Link to="/TranPage" className="button-30" >{" "}
                     Transaction Page{" "}
                 </Link>
-                <Link to="/" className="button-17">Log out</Link>
+                {/* <Link to="/" className="button-17">Log out</Link> */}
+                <button className="button-30" onClick={logoutHandler}> logout</button>
                 <br />
             </div>
         </>

@@ -25,21 +25,24 @@ import Axios from "axios";
 <li> Name: "faisal", Balance: 30000, Password: "lmn"  </li>
 <li> Name: "asif", Balance: 40000, Password: "xyz"   </li></> */
 
-export default () => {
+export default (props) => {
 
-    const [name, setName] = useState("Asif");
+    const [name, setName] = useState("");
     const [amount, setAmount] = useState(0);
     const [transactionType, setTransactionType] = useState("");
     // const name = "Asif";
-    const url = `http://localhost:8000/api/v1/account/${name}/transaction`;
+    const url = `http://localhost:8000/api/v1/account/${props.name}/transaction`;
 
-    const proceedButtonHandler = (e) => {
+    const proceedButtonHandler = async (e) => {
         e.preventDefault();
-        Axios.post(url,{
-            // name: name,
+      const resp =  await Axios.post(url,{
+            name: name,
             amount: amount,
             transactionType: transactionType
         })
+        console.log(props.name)
+        // setName(resp.data.name)
+        // console.log(name);
         console.log(amount);
         console.log(transactionType);
 

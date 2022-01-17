@@ -10,6 +10,7 @@ export default () => {
                     <NavLink exact to="/home">Home</NavLink>
                     <NavLink exact to="/">Login</NavLink>
                     <NavLink to="/register">Register</NavLink>
+                    {/* <NavLink to="/Dashboard">Dashboard</NavLink> */}
                 </nav>
             </div>
         </>
