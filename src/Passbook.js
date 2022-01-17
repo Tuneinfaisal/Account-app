@@ -35,5 +35,6 @@ export default function home() {
             <br />
         </div><div classname="App">
                 <CSVLink {...csvreport} class="button-30">Download data</CSVLink>
+                {/* <button class="button-30">Download</button> */}
             </div></>
     )}

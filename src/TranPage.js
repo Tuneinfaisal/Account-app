@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
 // import { CSVLink } from "react-csv";
 
 //this is DEMO data to test the export CSV file getting saved to system...
@@ -27,11 +28,16 @@ import Axios from "axios";
 
 export default (props) => {
 
+    let history = useHistory();
+
+    if(!props.loggedinUser) {
+        history.push('/');
+    }
     const [name, setName] = useState("");
     const [amount, setAmount] = useState(0);
     const [transactionType, setTransactionType] = useState("");
     // const name = "Asif";
-    const url = `http://localhost:8000/api/v1/account/${props.name}/transaction`;
+    const url = `http://localhost:8000/api/v1/account/${props.loggedinUser}/transaction`;
 
     const proceedButtonHandler = async (e) => {
         e.preventDefault();
@@ -40,7 +46,7 @@ export default (props) => {
             amount: amount,
             transactionType: transactionType
         })
-        console.log(props.name)
+        // console.log(props.name)
         // setName(resp.data.name)
         // console.log(name);
         console.log(amount);

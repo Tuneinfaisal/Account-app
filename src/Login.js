@@ -20,7 +20,7 @@ function App(props) {
         })
         console.log(resp)
         setloginInfo("user " + resp.data.name +  " login succefully")
-        props.setName(resp.data.name)
+        props.setLoggedinUser(resp.data.name)
         if(resp.data.name != "" )
         history.push('/Dashboard')
         // return <Redirect to="/Dashboard"/>  

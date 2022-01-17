@@ -1,13 +1,16 @@
 import React from "react";
-import { Link , useHistory } from "react-router-dom";
+import { Link , Redirect, useHistory } from "react-router-dom";
 
 export default function Dashboard(props) {
     let history = useHistory()
 
+    if(!props.loggedinUser) {
+        history.push('/');
+    }
     const logoutHandler = (e) => {
         e.preventDefault();
-        props.setName("")
-        history.push('/')
+        props.setLoggedinUser("")
+        history.push('/');
     }
 
     return (

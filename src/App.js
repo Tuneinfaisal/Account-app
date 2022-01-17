@@ -10,7 +10,7 @@ import Passbook from "./Passbook"
 import Alluser from "./Alluser";
 
 export default () => {
-    const [name , setName] = useState()
+    const [loggedinUser , setLoggedinUser] = useState();
     return (
         <div>
             <Menu></Menu>
@@ -20,19 +20,19 @@ export default () => {
                     <Home/>
                 </Route>
                 <Route exact path="/">
-                    <Login setName={setName}/>
+                    <Login setLoggedinUser={setLoggedinUser}/>
                 </Route>
                 <Route exact path="/Register">
                     <Register/>
                 </Route>
                 <Route exact path="/TranPage">
-                    <TranPage name = {name}/>
+                    <TranPage loggedinUser = {loggedinUser}/>
                 </Route>
                 <Route exact path="/Dashboard">
-                    <Dashboard name = {name} setName={setName}/>
+                    <Dashboard loggedinUser = {loggedinUser} setLoggedinUser={setLoggedinUser}/>
                 </Route>
                 <Route exact path="/Passbook">
-                    <Passbook/>
+                    <Passbook loggedinUser = {loggedinUser} />
                 </Route>
                 <Route exact path="/Alluser">
                     <Alluser/>
