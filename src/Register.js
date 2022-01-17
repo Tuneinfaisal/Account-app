@@ -18,7 +18,7 @@ export default function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(name) {
+        if(name && balance && password) {
             Axios.post(url,{
                 name: name,
                 balance: balance,
