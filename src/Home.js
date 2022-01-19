@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import marvel from './images/marvel.gif';
+import Register from "./Register";
+
 
 
 export default function home() {
@@ -22,7 +24,9 @@ export default function home() {
                     This page gives more access to functionality in future updates!!</h1></p>
                     <br/>
                     {/* <img  src={marvel} alt="loading..."/> */}
-                    <Link to="/" className="button-17">Log from here</Link>
+                    <Link to="/" className="button-17">Already a user Login from here</Link> <br></br> <hr></hr>
+                    <Link to="/Register" className="button-17">New user Register from here</Link> <br></br> <hr></hr>
+                    <Link to="/Admin" className="button-17">Admin Login here</Link> <hr></hr>
 
                 </div>
                 {/* <div className="btns">
